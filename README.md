@@ -1,16 +1,16 @@
 # Using Linear Regression to Analyze Jeopardy Game Data
 
-This repository contains code to scrape data from [http://www.j-archive.com](j-archive), clean it, then run a simple linear regression to predict scores using statistics including how often each contestant buzzed in and how often each contestant was correct.
+This repository contains code to scrape data from [j-archive](http://www.j-archive.com), clean it, then run a simple linear regression to predict scores using statistics including how often each contestant buzzed in and how often each contestant was correct.
 
 ## Requirements
 
-* `scrapy` for running the scraper. Scrapy can be installed via the terminal by running `$ pip install scrapy`. Once initialized, place the scraping file inside of the appropriate folder and run `scrapy crawl jeop_scraper -o jeop_data.json`. This will yield a json file with fields for Season, Game ID, Date, Player Name, Player ID, # Right, # Wrong, # of Daily Doubles, Double Jeopardy Score, [http://www.j-archive.com/help.php#coryatscore](Coryat Score) and Final Score.
+* `scrapy` for running the scraper. Scrapy can be installed via the terminal by running `$ pip install scrapy`. Once initialized, place the scraping file inside of the appropriate folder and run `scrapy crawl jeop_scraper -o jeop_data.json`. This will yield a json file with fields for Season, Game ID, Date, Player Name, Player ID, # Right, # Wrong, # of Daily Doubles, Double Jeopardy Score, [Coryat Score](http://www.j-archive.com/help.php#coryatscore) and Final Score.
 
 * Python 3 for running the analysis. Pandas is used for the dataframe and Scikit-Learn and StatsModels are used for the regression. Matplotlib is used for plotting.
 
 ## Scraping
 
-Initialize scrapy by running, `$ scrapy startproject jeopardy`. Once initialized, place the [/jeop_scraper.py](spider) inside of the appropriate folder and run `scrapy crawl jeop_scraper -o jeop_data.json`. This will yield a json file with fields for Season, Game ID, Date, Player Name, Player ID, # Right, # Wrong, # of Daily Doubles, Double Jeopardy Score, Coryat Score and Final Score.
+Initialize scrapy by running, `$ scrapy startproject jeopardy`. Once initialized, place the [spider](jeop_scraper.py) inside of the appropriate folder and run `scrapy crawl jeop_scraper -o jeop_data.json`. This will yield a json file with fields for Season, Game ID, Date, Player Name, Player ID, # Right, # Wrong, # of Daily Doubles, Double Jeopardy Score, Coryat Score and Final Score.
 
 ## Analysis
 
@@ -26,4 +26,4 @@ Double Jeopardy Score is often used as a proxy for player ability since it incor
 
 ## Acknowledgements
 
-We are particularly indebted to Andy Saunders for creating and maintaining the archive of data at [http://www.j-archive.com](j-archive), from which all of the data used was sourced.
+We are particularly indebted to Andy Saunders for creating and maintaining the archive of data at [j-archive](http://www.j-archive.com), from which all of the data used was sourced.
